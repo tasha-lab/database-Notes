@@ -24,13 +24,13 @@ Basically happens when some information is stored repeatedly.
 
 ## Dependencies
 
-**Functional Dependency\_** - It generalizes the concept of a key. One column determines another eg.
+**Functional Dependency** - It generalizes the concept of a key. One column determines another eg.
 <code>sql Employee_ID -> Employee_name<code>
 
-**_ Transitive dependency _** - For instance if we have attributes A,B and C. And <code>A->B</code> and <code>B->C</code>. Functional dependencies are also transitive. Therefore <code>A->C</code>. We can say, C is transitively dependent on A through B.  
+**Transitive dependency** - For instance if we have attributes A,B and C. And <code>A->B</code> and <code>B->C</code>. Functional dependencies are also transitive. Therefore <code>A->C</code>. We can say, C is transitively dependent on A through B.  
 We can also say it is a dependency of one non-prime attribute (An attribute thats not part of the candidate key) to another non-prime attribute.
 
-**_ Partial Dependency_** - Exists when an attribute is functionally dependent on another attribute and the other attribute is a component of multipart candidate key
+**Partial Dependency** - Exists when an attribute is functionally dependent on another attribute and the other attribute is a component of multipart candidate key
 
 ## Normalization rules
 
@@ -64,8 +64,7 @@ Our Table is not in any normal form yet. Melving, is in two departments. To sort
 - The table is in 1NF
 - There is not partial dependency. ie. no non-prime attribute is dependent on any candidate key of the table.
   (prime attribute is the opposite of non-prime attribute)
-
-For example:
+  For example:
 
 | Employee_ID | Employee | Age | Department         | Dept_ID |
 | ----------- | -------- | --- | ------------------ | ------- |
@@ -74,23 +73,20 @@ For example:
 | 103         | Edward   | 45  | Quality Assuarance | 03      |
 
 The Employee_ID and Dept_ID are the prime attributes. Since employee name can be identified by Employee_ID and department by Dept_ID. Pertial dependency exists.
-
 To fix this, we can split the table into:  
 Table 1: Employee Table
-
 | Employee_ID | Employee | Age | Dept_ID |
 | ----------- | -------- | --- | ------- |
-| 101         | Melvin   | 32  | 01      |
-| 101         | Melvin   | 32  | 02      |
-| 103         | Edward   | 45  | 03      |
+| 101 | Melvin | 32 | 01 |
+| 101 | Melvin | 32 | 02 |
+| 103 | Edward | 45 | 03 |
 
 Table 2: Department Table
-
-| Dept_ID | Department         |
+| Dept_ID | Department |
 | ------- | ------------------ |
-| 01      | Marketing          |
-| 01      | Sales              |
-| 03      | Quality Assuarance |
+| 01 | Marketing |
+| 01 | Sales |
+| 03 | Quality Assuarance |
 
 ### 3<sup>rd</sup> Normal form
 
@@ -108,7 +104,6 @@ Using the table we turned to 2<sup>nd</sup> earlier:
 | 103         | Edward   | 45  | 03      |
 
 Employee-> Employee_ID
-
 We can split the table into an employee name table and have our initial employee table
 
 | Employee_ID | Age | Dept_ID |
@@ -121,6 +116,13 @@ We can split the table into an employee name table and have our initial employee
 | ----------- | -------- |
 | 101         | Melvin   |
 | 103         | Edward   |
+
+### BCNF (Boyce-Codd Normal Form)
+
+#### Rules
+
+- Even if the data is in 3<sup>rd</sup> Normal Form, and there would be anomalies if it has more than one candidate key.
+- For each functional dependency, **A** is a super key
 
 # ACID properties
 
