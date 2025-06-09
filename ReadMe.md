@@ -43,20 +43,18 @@ These is a list of Normal Forms in SQL
 - Each cell must have only one value and not a set of values
 - Each record is unique
 - Each column is unique and no repeating columns  
-  For example:
-
-| Employee | Age | Department         |
-| -------- | --- | ------------------ |
-| Melvin   | 32  | Marketing, Sales   |
-| Edward   | 45  | Quality Assuarance |
+   For example:
+  | Employee | Age | Department |
+  | -------- | --- | |
+  | Melvin | 32 | Marketing, Sales |
+  | Edward | 45 | Quality Assuarance |
 
 Our Table is not in any normal form yet. Melving, is in two departments. To sort this out we arrang the table as:
-
-| Employee | Age | Department         |
+| Employee | Age | Department |
 | -------- | --- | ------------------ |
-| Melvin   | 32  | Marketing          |
-| Melvin   | 32  | Sales              |
-| Edward   | 45  | Quality Assuarance |
+| Melvin | 32 | Marketing |
+| Melvin | 32 | Sales |
+| Edward | 45 | Quality Assuarance |
 
 ### 2<sup>nd</sup> Normal form
 
