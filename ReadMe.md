@@ -144,7 +144,8 @@ Therefore, a single transaction must be executed completely or not at all to ens
 
 ## Consistency
 
-Consistency basically means maintaining data integrity constraints so that data is consistent before and after transaction.
+Consistency basically means maintaining data integrity constraints so that data is consistent before and after transaction.This Consistency requirement is that the sum of A and B unchanged
+by the execution of the transaction
 
 Using the previous example:  
 If in for example account **X** we only have ksh 50, and the rules say that no amount should be sent incase there are no enough funds, the transaction is rolled backed.
@@ -162,3 +163,18 @@ This ensures that once the transaction has completed, changes made to the transa
 
 Using the previous example:  
 Back to our transaction **T** example, if the transaction happened to completion, and we sent the money from **X** to **Y**, and the transaction was successful, the changes should stay even in any case of failure.
+
+##### Citations
+
+###### Normalisation citations
+
+- https://mrcet.com/downloads/digital_notes/ECE/II%20Year/DBS%20DIGITAL%20NOTES.pdf
+- https://mantavya.wordpress.com/wp-content/uploads/2018/02/chapter_4.pdf
+- https://home.adelphi.edu/~siegfried/cs443/443l5.pdf
+- https://dducollegedu.ac.in/Datafiles/cms/ecourse%20content/DBMS%20%20lecture%20on%20Functional%20Dependency%20for%20Mathematical%20students(2nd%20Sem).pdf
+- https://www.casrilanka.com/casl/images/stories/EDBA/extra_notes_-_21st_dec_2014.pdf
+
+###### ACID properties citations
+
+- https://dspmuranchi.ac.in/pdf/Blog/scrpoojagmailcomACID%20Properties1.pdf
+- https://blogs.bmc.com/acid-atomic-consistent-isolated-durable/?print-posts=pdf
