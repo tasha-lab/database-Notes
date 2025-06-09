@@ -45,13 +45,13 @@ These is a list of Normal Forms in SQL
 - Each column is unique and no repeating columns  
    For example:
   | Employee | Age | Department |
-  | -------- | --- | |
+  | -------- | --- | ------------------ |
   | Melvin | 32 | Marketing, Sales |
   | Edward | 45 | Quality Assuarance |
 
 Our Table is not in any normal form yet. Melving, is in two departments. To sort this out we arrang the table as:
+
 | Employee | Age | Department |
-| -------- | --- | ------------------ |
 | Melvin | 32 | Marketing |
 | Melvin | 32 | Sales |
 | Edward | 45 | Quality Assuarance |
