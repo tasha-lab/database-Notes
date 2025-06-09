@@ -25,7 +25,7 @@ Basically happens when some information is stored repeatedly.
 ## Dependencies
 
 **Functional Dependency** - It generalizes the concept of a key. One column determines another eg.
-<code>sql Employee_ID -> Employee_name<code>
+<code>sql Employee_ID -> Employee_name</code>
 
 **Transitive dependency** - For instance if we have attributes A,B and C. And <code>A->B</code> and <code>B->C</code>. Functional dependencies are also transitive. Therefore <code>A->C</code>. We can say, C is transitively dependent on A through B.  
 We can also say it is a dependency of one non-prime attribute (An attribute thats not part of the candidate key) to another non-prime attribute.
